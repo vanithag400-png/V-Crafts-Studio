@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Combos | V Crafts Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="mobile-header">
+
+  <img src="images/logo.png" class="mobile-logo">
+
+  <div class="center-title">V Crafts Studio</div>
+
+  <!-- HAMBURGER ICON -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<!-- DROPDOWN MENU -->
+<nav id="dropdown" class="dropdown-menu">
+  <a href="index.html#shop">🛍 Shop</a>
+  <a href="index.html#play">🧩 Play</a>
+  <a href="index.html#order">🛒 Order</a>
+  <a href="index.html#contact">✉ Contact</a>
+  <a href="reviews.html" class="btn reviews-btn">⭐ Reviews</a>
+</nav>
+
+<!-- PAGE TITLE -->
+<h2 class="page-title">Gift Combos</h2>
+
+<!-- PRODUCTS GRID -->
+<div class="products-grid">
+
+  <!-- PRODUCT 1 -->
+    <div class="more-product-card">
+        <img src="images/p7.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Puppy+Flower</h3>
+        <p class="mp-price">₹229</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Puppy+Flower', 229)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="more-product-card">
+        <img src="images/p8.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Rose+Hibiscus</h3>
+        <p class="mp-price">₹199</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Rose+Hibiscus', 199)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="more-product-card">
+        <img src="images/p9.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Bunny Bouquet+Red Rose</h3>
+        <p class="mp-price">₹299</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Bunny Bouquet+Red Rose', 299)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/p10.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Puppy+Puppy Paw</h3>
+        <p class="mp-price">₹189</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Puppy+Puppy Paw', 189)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/p11.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">3 Flower Hibiscus Combo</h3>
+        <p class="mp-price">₹249</p>
+        <button class="order-btn" onclick="orderFromOtherPage('3 Flower Hibiscus Combo', 249)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/p12.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Rose+Hibiscus</h3>
+        <p class="mp-price">₹249</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Rose+Hibiscus', 249)">Order Now</button>
+    </div>
+
+<script src="productsOrderRedirect.js"></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC products | V Crafts Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="mobile-header">
+
+  <img src="images/logo.png" class="mobile-logo">
+
+  <div class="center-title">V Crafts Studio</div>
+
+  <!-- HAMBURGER ICON -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<!-- DROPDOWN MENU -->
+<nav id="dropdown" class="dropdown-menu">
+  <a href="index.html#shop">🛍 Shop</a>
+  <a href="index.html#play">🧩 Play</a>
+  <a href="index.html#order">🛒 Order</a>
+  <a href="index.html#contact">✉ Contact</a>
+  <a href="reviews.html" class="btn reviews-btn">⭐ Reviews</a>
+</nav>
+
+<!-- PAGE TITLE -->
+<h2 class="page-title">PC products</h2>
+
+<!-- PRODUCTS GRID -->
+<div class="products-grid">
+
+  <!-- PRODUCT 1 -->
+    <div class="more-product-card">
+        <img src="images/p13.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">RCB Flower Bouquet</h3>
+        <p class="mp-price">₹499</p>
+        <button class="order-btn" onclick="orderFromOtherPage('RCB Flower Bouquet', 499)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="more-product-card">
+        <img src="images/p14.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">3 Flower Bouquet</h3>
+        <p class="mp-price">₹399</p>
+        <button class="order-btn" onclick="orderFromOtherPage('3 Flower Bouquet', 399)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="more-product-card">
+        <img src="images/p15.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Elegent Flower Bouquet</h3>
+        <p class="mp-price">₹449</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Elegent Flower Bouquet', 449)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/p16.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Sunflower Pot</h3>
+        <p class="mp-price">₹249</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Sunflower Pot', 249)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/p17.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Bunny Bouquet</h3>
+        <p class="mp-price">₹229</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Bunny Bouquet', 229)">Order Now</button>
+    </div>
+
+<script src="productsOrderRedirect.js"></script>
+
+</body>
+</html>

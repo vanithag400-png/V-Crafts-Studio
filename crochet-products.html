@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crochet Products | V Crafts Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="mobile-header">
+
+  <img src="images/logo.png" class="mobile-logo">
+
+  <div class="center-title">V Crafts Studio</div>
+
+  <!-- HAMBURGER ICON -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<!-- DROPDOWN MENU -->
+<nav id="dropdown" class="dropdown-menu">
+  <a href="index.html#shop">🛍 Shop</a>
+  <a href="index.html#play">🧩 Play</a>
+  <a href="index.html#order">🛒 Order</a>
+  <a href="index.html#contact">✉ Contact</a>
+  <a href="reviews.html" class="btn reviews-btn">⭐ Reviews</a>
+</nav>
+<!-- PAGE TITLE -->
+<h2 class="page-title">🧵 Crochet Products</h2>
+
+<!-- PRODUCTS GRID -->
+<div class="products-grid">
+
+  <!-- PRODUCT 1 -->
+  <div class="more-product-card">
+        <img src="images/p6.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Crochet Blutooth Bag</h3>
+        <p class="mp-price">₹299</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Crochet Blutooth Bag', 299)">Order Now</button>
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+    <div class="more-product-card">
+        <img src="images/p8.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Rose+Hibiscus</h3>
+        <p class="mp-price">₹199</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Crochet Blutooth Bag', 199)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="more-product-card">
+        <img src="images/p16.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">SunFlower Pot</h3>
+        <p class="mp-price">₹249</p>
+        <button class="order-btn" onclick="orderFromOtherPage('SunFlower Pot', 249)">Order Now</button>
+    </div>
+<script src="productsOrderRedirect.js"></script>
+
+</body>
+</html>

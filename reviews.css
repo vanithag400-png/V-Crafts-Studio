@@ -1,0 +1,315 @@
+body {
+    background: #a87bf1; /* soft pink background */
+    font-family: "Poppins", sans-serif; /* clean modern font */
+    padding-top: 0px !important; /* removes unwanted space */
+    overflow-x: hidden; /* 🚨 VERY IMPORTANT → prevents horizontal scroll */
+}
+
+/* HEADER */
+.mobile-header {
+    width: 100%; /* ✅ FIXED → was 98% causing side shift */
+    position: fixed; /* header always visible */
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgb(255, 255, 255);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.mobile-logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.center-title {
+    font-size: 22px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: -40px;
+}
+
+.hamburger {
+    font-size: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    color: #5f6f63;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: fixed;
+    top: 85px;
+    right: 15px;
+    background: white;
+    width: 180px;
+    display: none;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    z-index: 99999;
+}
+
+.dropdown-menu a {
+    padding: 12px 18px;
+    font-size: 17px;
+    display: block;
+    color: #5f6f63;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: #f2f2f2;
+}
+
+.show {
+    display: flex;
+}
+
+/* TITLE */
+.review-title{
+    position: fixed;          /* keeps title always visible */
+    top: 85px;                /* space below header */
+    left: 50%;                /* move to center horizontally */
+    transform: translateX(-50%); /* perfect center alignment */
+
+    font-size: 28px;
+    text-align: center;
+
+    z-index: 999;             /* stays above cards */
+    background: #c09de9;      /* prevents cards showing behind */
+    width: 100%;              /* full width for neat look */
+    padding: 10px 0;
+}
+
+/* UNDERLINE */
+.thread-underline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thread-underline .line {
+    width: 200px;
+    height: 4px;
+    background: #e992d4;
+    margin: 0 15px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+/* ⭐⭐⭐ POLAROID GRID — MAIN FIX ⭐⭐⭐ */
+.polaroid-area {
+
+    margin-top: 95px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 150px); /* Desktop = 3 cards */
+
+    justify-content: center; /* ⭐ centers perfectly */
+
+    gap: 25px;
+
+    /* ❌ REMOVED margin-left:400px */
+}
+
+/* CARD */
+.card {
+    width: 130px;
+    height: 170px;
+    padding: 12px;
+    border-radius: 15px;
+    border: 3px solid rgb(165, 114, 146);
+
+    background-image:
+        radial-gradient(rgb(175, 240, 145) 2px, transparent 2px),
+        radial-gradient(white 2px, transparent 2px);
+
+    background-size: 18px 18px;
+    background-position: 0 0, 9px 9px;
+
+    position: relative;
+    white-space: normal;
+    word-wrap: break-word;
+
+    transform: rotate(-8deg);
+}
+
+/* Alternate colors */
+.green { background-color: #c596f1; }
+.pink { background-color: #e6da3b; }
+
+/* PIN */
+.pin {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+    font-size: 24px;
+}
+
+/* Delete hidden */
+.delete-btn {
+    display: none !important;
+}
+
+/* JAR */
+.review-jar{
+
+    position: relative;     /* scrolls naturally with page */
+
+    font-size: 120px;        /* ⭐ controls emoji size — increase to 100px if you want BIG */
+
+    text-align: center;     /* keeps emoji centered */
+
+    margin: 30px auto;      /* auto = horizontal center */
+
+    width: 100%;           /* prevents right shifting */
+
+}
+.jar-text{
+
+    text-align: center;   /* centers the sentence */
+    
+    font-size: 20px;
+}
+/* Floating animation */
+@keyframes jarFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* POPUP */
+.review-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-polaroid {
+    background: #b96dec;
+    padding: 15px;
+    border-radius: 20px;
+    border: 3px dashed white;
+    background-image: radial-gradient(white 2px, transparent 2px);
+    background-size: 15px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.popup-polaroid textarea,
+.popup-polaroid input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    margin-bottom: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn-submit {
+    width: 45%;
+    padding: 10px;
+    background: #6ed140;
+    border: none;
+    border-radius: 12px;
+}
+
+.btn-cancel {
+    width: 45%;
+    padding: 10px;
+    background: #d14467;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ADMIN DELETE */
+#adminDeleteLink {
+    color: rgb(255, 60, 60);
+    font-weight: bold;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 10px;
+}
+
+/* HEART CONFETTI */
+.heart {
+    position: fixed;
+    font-size: 40px;
+    animation: fall 3s linear forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-20px) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* ⭐⭐⭐ MOBILE FIX ⭐⭐⭐ */
+@media screen and (max-width:768px){
+
+.polaroid-area{
+
+    grid-template-columns: repeat(2, 140px); /* Mobile = 2 cards */
+
+    gap: 18px;
+}
+
+.review-title{
+    font-size: 24px;
+}
+
+.review-jar{
+
+    width: 150px;     /* ⭐ increase jar size for mobile */
+    height: auto;
+
+    top: 20px;       /* keeps it below title */
+
+}
+
+}
+textarea {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
