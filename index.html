@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V Crafts Studio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body id="homePage">
+    <script>
+    // If skipIntro is set → hide intro immediately
+    if (localStorage.getItem("skipIntro") === "yes") {
+        document.addEventListener("DOMContentLoaded", function () {
+            let intro = document.getElementById("introScreen");
+            if (intro) intro.style.display = "none";
+        });
+
+        // remove it so next time intro appears normally
+        localStorage.removeItem("skipIntro");
+    }
+</script>
+
+    <!-- BRAND INTRO ANIMATION -->
+<div id="introScreen">
+    <img src="images/logo.png" class="intro-logo">
+</div>
+
+
+    <!-- CONFETTI CANVAS -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- ================= MOBILE HEADER ================= -->
+    <header class="mobile-header">
+        <img src="images/logo.png" class="mobile-logo">
+        <div class="center-title">V Crafts Studio</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- DROPDOWN MENU -->
+    <nav id="dropdown" class="dropdown-menu">
+        <a href="#shop">🛍 Shop</a>
+        <a href="#play">🧩 Play</a>
+        <a href="#order">👜 Order</a>
+        <a href="#contact">✉ Contact</a>
+        <a href="reviews.html" class="btn reviews-btn">⭐ Reviews</a>
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section">
+        <h1>Handmade is Premium 🤍</h1>
+        <p>Crafted with love, made for you.</p>
+    </section>
+
+    <div class="magic-crochet-divider">
+    <span class="yarn">🧶</span>
+    <div class="thread-track">
+        <div class="thread-gradient"></div>
+        <div class="sparkle sparkle1">✨</div>
+        <div class="sparkle sparkle2">✨</div>
+    </div>
+    <span class="needle" onclick="playStitch()">🪡</span>
+</div>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+    <!-- ========== PRODUCTS SECTION ========== -->
+<section class="products-section">
+
+    <h2 class="products-title">Our Products</h2>
+    <!-- CRAFT CATEGORIES -->
+<div class="category-wrapper">
+
+  <a href="crochet-products.html" class="category-btn">🧵 Crochet</a>
+
+  <a href="pc-products.html" class="category-btn">🌸 PC Crafts</a>
+
+  <a href="gift-combos.html" class="category-btn">🎁 Gift Combos</a>
+
+
+</div>
+
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="images/p1.jpg" class="product-img">
+            <h3>PC Red Rose</h3>
+            <p class="price">₹10</p>
+            <button class="order-btn" onclick="selectProduct('PC Red Rose', 10)">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/p2.jpg" class="product-img">
+            <h3>PC Little Dog</h3>
+            <p class="price">₹69</p>
+            <button class="order-btn" onclick="selectProduct('PC Little Dog', 69)">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/p3.jpg" class="product-img">
+            <h3>PC Hibiscus Flower</h3>
+            <p class="price">₹99</p>
+            <button class="order-btn" onclick="selectProduct('PC Hibiscus Flower', 99)">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/p4.jpg.jpeg" class="product-img">
+            <h3>Flower Fridge Magnet</h3>
+            <p class="price">₹59</p>
+            <button class="order-btn" onclick="selectProduct('Flower Fridge Magnet', 59)">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/p5.jpg.jpeg" class="product-img">
+            <h3>Butterfly Fridge Magnet</h3>
+            <p class="price">₹59</p>
+            <button class="order-btn" onclick="selectProduct('Butterfly Fridge Magnet', 59)">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/p6.jpg.jpeg" class="product-img">
+            <h3>Crochet Blutooth Pouch</h3>
+            <p class="price">₹249</p>
+            <button class="order-btn" onclick="selectProduct('Crochet Blutooth Pouch', 199)">Order Now</button>
+        </div>
+        <div class="view-more-wrapper">
+    <a href="more-products.html" class="btn view-more-btn">View More Products 👀</a>
+</div>
+</section>
+
+    <div class="divider"></div>
+
+    <!-- ================= PUZZLE GAME ================= -->
+    <section id="play" class="section">
+
+        <h2>Fix the Puzzle 🧶</h2>
+        <p>Arrange correctly within 15 seconds to unlock ₹10 OFF</p>
+
+        <button class="btn" onclick="startPuzzle()">Start Puzzle</button>
+        <p id="timer" class="timer"></p>
+
+        <div class="puzzle-grid locked" id="puzzleGrid">
+
+            <img src="images/i1.png.jpg" data-id="1" onclick="selectTile(this)">
+            <img src="images/i2.png.jpg" data-id="2" onclick="selectTile(this)">
+            <img src="images/i3.png.jpg" data-id="3" onclick="selectTile(this)">
+            <img src="images/i4.png.jpg" data-id="4" onclick="selectTile(this)">
+            <img src="images/i5.png.jpg" data-id="5" onclick="selectTile(this)">
+            <img src="images/i6.png.jpg" data-id="6" onclick="selectTile(this)">
+            <img src="images/i7.png.jpg" data-id="7" onclick="selectTile(this)">
+            <img src="images/i8.png.jpg" data-id="8" onclick="selectTile(this)">
+            <img src="images/i9.png.jpg" data-id="9" onclick="selectTile(this)">
+
+        </div>
+
+        <p id="puzzleResult" class="puzzle-result"></p>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ================= ORDER FORM ================= -->
+     <section id="order" class="section">
+    <h2 class="order-title">Order Form</h2>
+    <form id="orderForm" class="order-form" onsubmit="sendOrder(event)">
+    <input id="name" type="text" placeholder="Your Name" required>
+    <input id="phone" type="tel" placeholder="Mobile Number" required>
+    <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+    <input id="pname" type="text" placeholder="Product Name" readonly>
+    <input id="price" type="number" placeholder="Final Price" readonly>
+    <input id="coupon" type="text" placeholder="Coupon Code" readonly>
+    <input id="txn" type="text" placeholder="Transaction ID">
+    <button type="submit" class="btn">Place Order</button>
+</form>
+
+<!-- SUCCESS POPUP -->
+<div id="orderSuccess" class="order-success">
+    <div class="thumb">👍</div>
+    <p>Order Placed Successfully!</p>
+</div>
+
+<div class="divider"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</div>
+
+</div>
+</a>
+    <!-- ================= CONTACT ================= -->
+   <h2 class="contact-title">Contact Us</h2>
+
+<div class="contact-icons">
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/916360693160" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="contact-icon">
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://instagram.com/v_craftsstudio" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="contact-icon">
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:v.craftsstudio1@gmail.com">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="contact-icon">
+  </a>
+
+</div>
+
+    <footer class="footer">
+        <p>© 2026 V Crafts Studio | Handmade with Love 🤍</p>
+    </footer>
+
+    
+    
+<!-- ADMIN ICON (only visible to you) -->
+
+
+<!-- Admin Icon (Spreadsheet) -->
+<a href="https://docs.google.com/spreadsheets/d/1-jCcgpcbwjly-UazMsLl-1ZTTINWxQNliuNIF55vdW4/edit?usp=sharing" target="_blank">
+    <div id="adminIcon" class="admin-icon">
+        ⚙️
+    </div>
+</a>
+
+
+<script src="productsOrderRedirect.js"></script>
+<script>
+(function () {
+
+    // if coming from product pages
+    if (localStorage.getItem("orderProductName")) {
+
+        // stop browser restoring previous scroll
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // remove intro instantly
+        window.addEventListener("load", function () {
+
+            const intro =
+                document.getElementById("introScreen") ||
+                document.getElementById("intro") ||
+                document.getElementById("splash");
+
+            if (intro) intro.remove();
+
+            // force direct jump to order form WITHOUT animation
+            const order = document.getElementById("order");
+            if (order) {
+                order.style.display = "block";
+                window.scrollTo({ top: order.offsetTop, behavior: "instant" });
+            }
+
+        });
+
+    }
+
+})();
+</script>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

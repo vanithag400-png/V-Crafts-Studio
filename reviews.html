@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - V Crafts Studio</title>
+
+    <link rel="stylesheet" href="reviews.css">
+
+    <!-- Firebase SDK v8 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+
+<body class="reviews-page">
+
+    <!-- MOBILE HEADER -->
+<!-- SAME HEADER -->
+<!-- SAME HEADER AS MORE PRODUCTS -->
+<div class="mobile-header">
+    <img src="images/logo.png" class="mobile-logo">
+    <h2 class="center-title">V Crafts Studio</h2>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+</div>
+
+<div id="dropdown" class="dropdown-menu">
+    <a href="index.html">Home</a>
+    <a href="more-products.html">More Products</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="https://wa.me/916360693160">WhatsApp</a>
+    <a href="#" id="adminDeleteLink">Delete Reviews</a>
+</div>
+
+    <h1 class="review-title">💗 Customer Reviews 💗</h1>
+
+   <div class="thread-underline">
+   <div class="line"></div>
+</div>
+
+    <!-- REVIEW JAR -->
+    <div class="review-jar">
+        🫙
+        <p class="jar-text">Tap here to write your review</p>
+    </div>
+
+    <!-- REVIEW CARDS -->
+    <div id="reviewsContainer" class="polaroid-area"></div>
+
+
+    <!-- POPUP FOR WRITING REVIEW -->
+<!-- POPUP FOR WRITING REVIEW -->
+<div id="reviewPopup" class="review-popup">
+    <div class="popup-card">
+
+        <div class="popup-polaroid">
+            <textarea
+  id="reviewText"
+  placeholder="Write your review (max 70 characters)"
+  maxlength="70">
+</textarea>
+            <input id="reviewName" type="text" placeholder="Your Name">
+        </div>
+
+        <div class="popup-buttons">
+            <button class="btn-submit" onclick="submitReview()">Submit</button>
+            <button class="btn-cancel" onclick="closeReviewPopup()">Cancel</button>
+        </div>
+
+    </div>
+</div>
+
+    <script src="reviews.js"></script>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>

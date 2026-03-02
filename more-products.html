@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Products - V Crafts Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="moreProductsPage">
+
+<!-- SAME HEADER -->
+<div class="mobile-header">
+    <img src="images/logo.png" class="mobile-logo">
+    <h2 class="center-title">V Crochet Studio</h2>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+</div>
+
+<div id="dropdown" class="dropdown-menu">
+    <a href="index.html">Home</a>
+    <a href="more-products.html">More Products</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="https://wa.me/916360693160">WhatsApp</a>
+</div>
+
+<h1 class="extra-title">🌸 Our Exclusive Products </h1>
+
+<!-- PRODUCT GRID -->
+<div class="more-products-grid">
+
+    <!-- PRODUCT 1 -->
+    <div class="more-product-card">
+        <img src="images/p18.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Hair Clips</h3>
+        <p class="mp-price">₹89</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Hair Clips', 89)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="more-product-card">
+        <img src="images/p19.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Hibiscus Flower</h3>
+        <p class="mp-price">₹149</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Hibiscus Flower', 149)">Order Now</button>
+    </div>
+        
+    <!-- PRODUCT 3 -->
+    <div class="more-product-card">
+        <img src="images/p20.jpg.jpeg" class="mp-img">
+        <h3 class="mp-name">Hibiscus Flower</h3>
+        <p class="mp-price">₹149</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Hibiscus Flower', 149)">Order Now</button>
+    </div>
+
+</div>
+
+<script src="productsOrderRedirect.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</body>
+</html>
