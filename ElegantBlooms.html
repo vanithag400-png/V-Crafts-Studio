@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegant Blooms | V Crafts Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="mobile-header">
+
+  <img src="images/logo.png" class="mobile-logo">
+
+  <div class="center-title">V Crafts Studio</div>
+
+  <!-- HAMBURGER ICON -->
+  <div class="hamburger" onclick="toggleMenu()"></div>
+
+</header>
+
+
+<!-- PAGE TITLE -->
+<h2 class="page-title">Elegant Blooms</h2>
+
+<!-- PRODUCTS GRID -->
+<div class="products-grid">
+
+  <!-- PRODUCT 1 -->
+    <div class="more-product-card">
+        <img src="images/P5.jpeg" class="mp-img">
+        <h3 class="mp-name">Mint Blush Lilly</h3>
+        <p class="mp-price">₹199</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Mint Blush Lilly', 199)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="more-product-card">
+        <img src="images/P4.jpeg" class="mp-img">
+        <h3 class="mp-name">RED rose</h3>
+        <p class="mp-price">₹99</p>
+        <button class="order-btn" onclick="orderFromOtherPage('RED rose', 99)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="more-product-card">
+        <img src="images/P6.jpeg" class="mp-img">
+        <h3 class="mp-name">Elegant Hibiscus</h3>
+        <p class="mp-price">₹99</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Elegant Hibiscus', 99)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/P7.jpeg" class="mp-img">
+        <h3 class="mp-name">Lavender Lilly</h3>
+        <p class="mp-price">₹149</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Lavender Lilly', 149)">Order Now</button>
+    </div>
+
+<script src="productsOrderRedirect.js"></script>
+
+</body>
+</html>

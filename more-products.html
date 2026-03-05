@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Products - V Crafts Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="moreProductsPage">
+
+<!-- SAME HEADER -->
+<div class="mobile-header">
+    <img src="images/logo.png" class="mobile-logo">
+    <h2 class="center-title">V Crochet Studio</h2>
+    <div class="hamburger" onclick="toggleMenu()"></div>
+</div>
+
+<div id="dropdown" class="dropdown-menu">
+    <a href="index.html">Home</a>
+    <a href="more-products.html">More Products</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="https://wa.me/916360693160">WhatsApp</a>
+</div>
+
+<h1 class="extra-title">🌸 Our Exclusive Products </h1>
+
+<!-- PRODUCT GRID -->
+<div class="more-products-grid">
+
+    <!-- PRODUCT 1 -->
+    <div class="more-product-card">
+        <img src="images/K4.jpeg" class="mp-img">
+        <h3 class="mp-name">V key chain</h3>
+        <p class="mp-price">₹80</p>
+        <button class="order-btn" onclick="orderFromOtherPage('V Key chain', 80)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="more-product-card">
+        <img src="images/K5.jpeg" class="mp-img">
+        <h3 class="mp-name">Bunny Keybunch</h3>
+        <p class="mp-price">₹60</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Bunny Keybunch', 60)">Order Now</button>
+    </div>
+        
+    <!-- PRODUCT 3 -->
+    <div class="more-product-card">
+        <img src="images/K6.jpeg" class="mp-img">
+        <h3 class="mp-name">H Alpabet KC</h3>
+        <p class="mp-price">₹80</p>
+        <button class="order-btn" onclick="orderFromOtherPage('H Alpabet KC', 80)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/K7.jpeg" class="mp-img">
+        <h3 class="mp-name">Lavender Flower KC</h3>
+        <p class="mp-price">₹80</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Lavender Flower KC', 80)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/K8.jpeg" class="mp-img">
+        <h3 class="mp-name">Bunny KC</h3>
+        <p class="mp-price">₹60</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Bunny KC', 60)">Order Now</button>
+    </div>
+
+    <div class="more-product-card">
+        <img src="images/K9.jpeg" class="mp-img">
+        <h3 class="mp-name">Puppy KC</h3>
+        <p class="mp-price">₹80</p>
+        <button class="order-btn" onclick="orderFromOtherPage('Puppy KC', 80)">Order Now</button>
+    </div>
+
+</div>
+
+<script src="productsOrderRedirect.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</body>
+</html>
